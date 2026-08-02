@@ -98,43 +98,12 @@ function ColorRibbon() {
 
 function ProductPreview() {
   return (
-    <div className="product-preview" aria-label="Coorder Kanban as shown on iPad">
-      <div className="ipad-frame">
-        <div className="ipad-camera" />
-        <div className="ipad-screen">
-          <div className="ipad-tabbar" aria-hidden="true">
-            <span>New</span>
-            <span>Orders</span>
-            <span>Display</span>
-            <span className="active">Kanban</span>
-            <span>Inventory</span>
-            <span>Settings</span>
-          </div>
-          <div className="real-kanban">
-            <div className="kanban-ambient" aria-hidden="true">
-              <img src="/assets/coorder-logo.png" alt="" />
-              <div><strong>10:38</strong><span>August 2</span></div>
-            </div>
-            <div className="kanban-order-row">
-              <article className="ipad-order-card blue-order">
-                <header><strong>#1042 · Dine In</strong><span>2:18</span></header>
-                <div className="ipad-item"><b>2</b><span>Chicken Tacos<small>No onions</small></span><i>Preparing</i></div>
-                <div className="ipad-item"><b>1</b><span>Citrus Soda</span><i>Preparing</i></div>
-              </article>
-              <article className="ipad-order-card orange-order">
-                <header><strong>#1040 · Online</strong><span>8:04</span></header>
-                <div className="ipad-item"><b>1</b><span>House Burger<small>Truffle fries</small></span><i>Cooking</i></div>
-                <div className="ipad-item cooked"><b>1</b><span>Garden Salad</span><i>Cooked</i></div>
-              </article>
-              <article className="ipad-order-card green-order">
-                <header><strong>#1039 · Pickup</strong><span>12:31</span></header>
-                <div className="ipad-item cooked"><b>2</b><span>Margherita Pizza</span><i>Cooked</i></div>
-                <button type="button" tabIndex={-1}>Complete</button>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="product-preview" aria-label="Real Coorder Kanban running as an iPad app">
+      <img
+        className="real-ipad-capture"
+        src="/assets/coorder-kanban-ipad.png"
+        alt="Coorder Kanban on iPad showing a live restaurant order, the Coorder logo, current time, and date"
+      />
     </div>
   );
 }

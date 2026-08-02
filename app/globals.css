@@ -47,10 +47,8 @@ h1, h2, h3 { font-weight: 700; }
   height: 46px;
   display: grid;
   place-items: center;
-  overflow: hidden;
-  border-radius: 15px;
-  background: linear-gradient(145deg, #edf7dc, #e9eef9);
-  box-shadow: inset 0 0 0 1px rgba(23, 32, 28, .04);
+  overflow: visible;
+  background: transparent;
 }
 
 .brand-mark img { width: 37px; height: 37px; object-fit: contain; }
@@ -92,37 +90,10 @@ h1, h2, h3 { font-weight: 700; }
 .color-ribbon .red { background: var(--red); }
 
 .product-preview { position: relative; min-width: 0; }
-.ipad-frame { position: relative; padding: 10px; border-radius: 34px; background: #171b1f; box-shadow: 0 28px 75px rgba(23, 32, 28, .18); }
-.ipad-camera { position: absolute; z-index: 3; top: 14px; left: 50%; width: 5px; height: 5px; border-radius: 50%; background: #394047; transform: translateX(-50%); }
-.ipad-screen { overflow: hidden; border-radius: 26px; background: var(--page); }
-.ipad-tabbar { min-height: 54px; display: flex; align-items: center; justify-content: center; gap: 2px; padding: 9px 12px; border-bottom: 1px solid rgba(23, 32, 28, .06); background: rgba(255, 255, 255, .92); }
-.ipad-tabbar span { padding: 7px 9px; border-radius: 999px; color: #4f5b55; font-size: 8px; font-weight: 750; }
-.ipad-tabbar .active { color: #376cae; background: var(--soft-blue); }
-.real-kanban { position: relative; min-height: 380px; overflow: hidden; padding: 42px 16px 18px; background: radial-gradient(circle at 50% 46%, #003838 0, #1e3439 36%, #212c38 66%, #221f25 100%); }
-.kanban-ambient { position: absolute; inset: 14px 0 auto; display: flex; align-items: center; justify-content: center; gap: 12px; opacity: .2; }
-.kanban-ambient img { width: 72px; height: 72px; border-radius: 20px; object-fit: cover; }
-.kanban-ambient div { display: flex; flex-direction: column; align-items: center; }
-.kanban-ambient strong { color: var(--blue); font-size: 48px; line-height: .8; letter-spacing: -.06em; }
-.kanban-ambient span { margin-top: 8px; color: var(--orange); font-size: 20px; font-weight: 800; }
-.kanban-order-row { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; align-items: start; margin-top: 66px; }
-.ipad-order-card { min-width: 0; padding: 9px; border-radius: 14px; background: rgba(242, 242, 246, .97); box-shadow: 0 10px 26px rgba(0, 0, 0, .24); }
-.ipad-order-card header { padding: 7px 6px; border-radius: 9px; text-align: center; background: var(--order-soft); }
-.ipad-order-card header strong, .ipad-order-card header span { display: block; }
-.ipad-order-card header strong { overflow: hidden; color: var(--order); font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
-.ipad-order-card header span { margin-top: 3px; color: #222b28; font-size: 8px; font-weight: 750; }
-.blue-order { --order: #4b83c8; --order-soft: #e6f0fd; }
-.orange-order { --order: #b57419; --order-soft: #fff0d6; }
-.green-order { --order: #6e8835; --order-soft: #edf5dd; }
-.ipad-item { display: grid; grid-template-columns: 18px 1fr; gap: 6px; margin-top: 8px; padding: 8px; border-radius: 9px; background: #fff; }
-.ipad-item b { width: 18px; height: 18px; display: grid; place-items: center; border-radius: 6px; color: #fff; background: var(--order); font-size: 8px; }
-.ipad-item span { overflow: hidden; font-size: 8px; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; }
-.ipad-item small { display: block; margin-top: 2px; color: #89918d; font-size: 6px; font-weight: 650; }
-.ipad-item i { grid-column: 1 / -1; padding: 5px; border-radius: 6px; color: var(--order); background: var(--order-soft); font-size: 6px; font-style: normal; font-weight: 850; text-align: center; }
-.ipad-item.cooked { opacity: .74; }
-.ipad-order-card button { width: 100%; margin-top: 8px; padding: 7px; border: 0; border-radius: 8px; color: #fff; background: #4b83c8; font: inherit; font-size: 7px; font-weight: 850; }
+.real-ipad-capture { width: 100%; overflow: hidden; border-radius: 28px; box-shadow: 0 28px 75px rgba(23, 32, 28, .18); }
 
-.statement-section { position: relative; overflow: hidden; padding: 108px 0; border-block: 1px solid #dfe5e1; background: #e8eeeb; }
-.pattern-strip { position: absolute; inset: 0; opacity: .13; background: url('/assets/coorder-pattern.png') center / cover; }
+.statement-section { position: relative; overflow: hidden; padding: 108px 0; border-block: 1px solid #e1e5e2; background: #f8f9f8; }
+.pattern-strip { position: absolute; inset: 0; opacity: .3; background: url('/assets/coorder-pattern.png') center / cover; filter: saturate(.92) contrast(.98); }
 .statement { position: relative; z-index: 1; text-align: center; }
 .statement .section-label { color: #617632; }
 .statement h2 { max-width: 940px; margin: 18px auto 0; color: var(--ink); font-size: clamp(38px, 5.3vw, 68px); line-height: 1.04; letter-spacing: -.052em; }
@@ -190,12 +161,12 @@ h1, h2, h3 { font-weight: 700; }
 .legal-card p { max-width: 500px; margin: 14px 0 0; color: var(--muted); font-size: 14px; line-height: 1.62; }
 .legal-arrow { position: absolute; top: 30px; right: 30px; width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 13px; background: #fff; font-weight: 850; }
 
-.final-cta { position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 50px; margin-bottom: 100px; padding: 62px; border-radius: 34px; color: #fff; background: var(--ink); }
-.final-cta .section-label { color: #b8dc69; }
+.final-cta { position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 50px; margin-bottom: 100px; padding: 62px; border: 1px solid #dce5d2; border-radius: 34px; color: var(--ink); background: linear-gradient(135deg, #f5f8ee, #eaf3ff); }
+.final-cta .section-label { color: #617632; }
 .final-cta h2 { font-size: clamp(40px, 5.4vw, 66px); }
-.final-cta p { max-width: 620px; margin: 18px 0 0; color: #b8c2bd; font-size: 16px; line-height: 1.6; }
+.final-cta p { max-width: 620px; margin: 18px 0 0; color: var(--muted); font-size: 16px; line-height: 1.6; }
 .button-dark { position: relative; z-index: 2; color: var(--ink); background: var(--green); }
-.cta-colors { position: absolute; right: -75px; top: -100px; width: 360px; height: 290px; opacity: .14; transform: rotate(-9deg); }
+.cta-colors { position: absolute; right: -75px; top: -100px; width: 360px; height: 290px; opacity: .22; transform: rotate(-9deg); }
 .cta-colors i { position: absolute; width: 92px; border-radius: 36px; }
 .cta-colors i:nth-child(1) { left: 0; top: 20px; height: 92px; background: var(--blue); }
 .cta-colors i:nth-child(2) { left: 104px; top: 0; height: 160px; background: var(--green); }
@@ -228,13 +199,7 @@ h1, h2, h3 { font-weight: 700; }
   .hero h1 { font-size: clamp(47px, 14vw, 68px); }
   .hero-copy > p { font-size: 16px; }
   .product-preview { width: 100%; margin-top: 20px; }
-  .ipad-frame { padding: 7px; border-radius: 25px; }
-  .ipad-screen { border-radius: 19px; }
-  .ipad-tabbar { min-height: 44px; overflow: hidden; gap: 0; padding-inline: 5px; }
-  .ipad-tabbar span { padding: 6px 5px; font-size: 6px; }
-  .real-kanban { min-height: 300px; padding-inline: 10px; }
-  .kanban-order-row { grid-template-columns: 1fr 1fr; }
-  .ipad-order-card:last-child { display: none; }
+  .real-ipad-capture { border-radius: 20px; }
   .statement-section { padding: 86px 0; }
   .features-section { padding-block: 90px; }
   .section-heading { grid-template-columns: 1fr; gap: 20px; }

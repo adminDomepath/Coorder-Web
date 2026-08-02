@@ -31,7 +31,8 @@ test("server-renders the finished Coorder landing page", async () => {
   const html = await response.text();
   assert.match(html, /Every order,/);
   assert.match(html, /Clover orders, automatically in Coorder/);
-  assert.match(html, /Coorder Kanban as shown on iPad/);
+  assert.match(html, /Real Coorder Kanban running as an iPad app/);
+  assert.match(html, /\/assets\/coorder-kanban-ipad\.png/);
   assert.match(html, /Contact us/);
   assert.doesNotMatch(html, /Contact Leonardo/);
   assert.match(html, /Clear terms\. Transparent data practices\./);
@@ -66,6 +67,7 @@ test("ships the complete Coorder brand and legal surface", async () => {
   await Promise.all([
     access(new URL("../public/assets/coorder-logo.png", import.meta.url)),
     access(new URL("../public/assets/coorder-pattern.png", import.meta.url)),
+    access(new URL("../public/assets/coorder-kanban-ipad.png", import.meta.url)),
     access(new URL("../public/og.png", import.meta.url)),
   ]);
 });
