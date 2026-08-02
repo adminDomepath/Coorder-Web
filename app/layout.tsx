@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
+import { sitePath } from "./site-path";
+
+const siteUrl = process.env.GITHUB_PAGES === "true"
+  ? "https://admindomepath.github.io/Coorder-Web"
+  : "https://coorder.domepath.com";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -8,7 +13,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://coorder.domepath.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Coorder — Visual order management for restaurant teams",
     template: "%s · Coorder",
@@ -16,9 +21,9 @@ export const metadata: Metadata = {
   description:
     "Organize, prepare, and track restaurant orders in a visual workspace for Apple devices, with an optional Clover integration.",
   icons: {
-    icon: "/assets/coorder-logo.png",
-    shortcut: "/assets/coorder-logo.png",
-    apple: "/assets/coorder-logo.png",
+    icon: sitePath("/assets/coorder-logo.png"),
+    shortcut: sitePath("/assets/coorder-logo.png"),
+    apple: sitePath("/assets/coorder-logo.png"),
   },
   openGraph: {
     type: "website",
@@ -27,7 +32,7 @@ export const metadata: Metadata = {
     title: "Coorder — Every order, exactly where your team needs it",
     description:
       "A clear, visual restaurant order workflow for Apple devices, with an optional Clover integration.",
-    url: "https://coorder.domepath.com",
+    url: siteUrl,
     images: [
       {
         url: "/og.png",
