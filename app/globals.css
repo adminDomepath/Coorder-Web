@@ -106,7 +106,7 @@ h1, h2, h3 { font-weight: 700; }
 .color-ribbon .red { background: var(--red); }
 
 .product-preview { position: relative; min-width: 0; }
-.real-ipad-capture { width: 100%; overflow: hidden; border-radius: 28px; box-shadow: 0 28px 75px rgba(23, 32, 28, .18); }
+.real-ipad-capture { width: 100%; overflow: hidden; border: 12px solid #111817; border-radius: 38px; box-shadow: 0 28px 75px rgba(23, 32, 28, .22); }
 
 .statement-section { position: relative; overflow: hidden; padding: 108px 0; border-block: 1px solid #e1e5e2; background: #f8f9f8; }
 .pattern-strip { position: absolute; inset: 0; opacity: .3; background: url('/assets/coorder-pattern.png') center / cover; filter: saturate(.92) contrast(.98); }
@@ -196,7 +196,7 @@ h1, h2, h3 { font-weight: 700; }
   .hero h1 { font-size: clamp(47px, 14vw, 68px); }
   .hero-copy > p { font-size: 16px; }
   .product-preview { width: 100%; margin-top: 20px; }
-  .real-ipad-capture { border-radius: 20px; }
+  .real-ipad-capture { border-width: 8px; border-radius: 28px; }
   .statement-section { padding: 86px 0; }
   .features-section { padding-block: 90px; }
   .feature-grid { grid-template-columns: 1fr; }
