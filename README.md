@@ -18,3 +18,8 @@ npm run dev
 ```bash
 npm test
 ```
+
+## GitHub Pages
+
+Pushes to `main` automatically build and deploy the static site to
+`https://admindomepath.github.io/Coorder-Web/`.

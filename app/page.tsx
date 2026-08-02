@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SiteHeader from "./SiteHeader";
+import { sitePath } from "./site-path";
 
 export const metadata: Metadata = {
   title: "Coorder — A clearer workflow for every order",
@@ -74,7 +75,7 @@ function Brand() {
   return (
     <a className="brand" href="#top" aria-label="Coorder home">
       <span className="brand-mark">
-        <img src="/assets/coorder-logo.png" alt="" />
+        <img src={sitePath("/assets/coorder-logo.png")} alt="" />
       </span>
       <span>
         <strong>Coorder</strong>
@@ -100,7 +101,7 @@ function ColorRibbon() {
 function HeroWordmark() {
   return (
     <div className="hero-wordmark" aria-label="Coorder">
-      <img className="hero-wordmark-logo" src="/assets/coorder-logo.png" alt="" aria-hidden="true" />
+      <img className="hero-wordmark-logo" src={sitePath("/assets/coorder-logo.png")} alt="" aria-hidden="true" />
       <span className="hero-wordmark-text" aria-hidden="true">
         <span className="wordmark-blue">CO</span>
         <span className="wordmark-purple">O</span>
@@ -118,7 +119,7 @@ function ProductPreview() {
     <div className="product-preview" aria-label="Real Coorder Kanban running as an iPad app">
       <img
         className="real-ipad-capture"
-        src="/assets/coorder-kanban-ipad.png"
+        src={sitePath("/assets/coorder-kanban-ipad.png")}
         alt="Coorder Kanban on iPad showing a live restaurant order, the Coorder logo, current time, and date"
       />
     </div>
@@ -142,7 +143,11 @@ export default function Home() {
       </section>
 
       <section className="statement-section">
-        <div className="pattern-strip" aria-hidden="true" />
+        <div
+          className="pattern-strip"
+          style={{ backgroundImage: `url(${sitePath("/assets/coorder-pattern.png")})` }}
+          aria-hidden="true"
+        />
         <div className="statement page-shell">
           <h2>From order entry to handoff, every station sees the same live work.</h2>
           <p>Tickets retain their items, modifiers, notes, order type, preparation state, and elapsed time while they move through the restaurant.</p>
@@ -194,15 +199,15 @@ export default function Home() {
             </ul>
           </div>
           <div className="connection-visual" aria-label="Clover connected to Coorder">
-            <div className="connection-node clover-node"><img className="clover-logo" src="/assets/clover-logo.png" alt="Clover logo" /><span>Clover</span><small>Point of sale</small></div>
+            <div className="connection-node clover-node"><img className="clover-logo" src={sitePath("/assets/clover-logo.png")} alt="Clover logo" /><span>Clover</span><small>Point of sale</small></div>
             <div className="connection-line"><i /><i /><i /></div>
-            <div className="connection-node coorder-node"><img src="/assets/coorder-logo.png" alt="" /><span>Coorder</span><small>Order workflow</small></div>
+            <div className="connection-node coorder-node"><img src={sitePath("/assets/coorder-logo.png")} alt="" /><span>Coorder</span><small>Order workflow</small></div>
           </div>
         </div>
       </section>
 
       <section className="final-cta page-shell">
-        <img className="cta-logo" src="/assets/coorder-logo.png" alt="" aria-hidden="true" />
+        <img className="cta-logo" src={sitePath("/assets/coorder-logo.png")} alt="" aria-hidden="true" />
         <div>
           <h2>Give every order a clearer path.</h2>
           <p>Bring your restaurant workflow to Apple devices with Coorder—and connect Clover only when it adds value to your operation.</p>
@@ -216,8 +221,8 @@ export default function Home() {
           <p>Visual order management for modern restaurant teams.</p>
           <div className="footer-links">
             <a href="mailto:leonardo.arias@domepath.com">Contact</a>
-            <a href="/legal/privacy/">Privacy</a>
-            <a href="/legal/eula/">EULA</a>
+            <a href={sitePath("/legal/privacy/")}>Privacy</a>
+            <a href={sitePath("/legal/eula/")}>EULA</a>
           </div>
           <small>© 2026 DomePath. Clover and Apple are trademarks of their respective owners.</small>
         </div>

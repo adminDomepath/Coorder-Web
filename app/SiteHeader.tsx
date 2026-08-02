@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { sitePath } from "./site-path";
 
 export default function SiteHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,7 +17,7 @@ export default function SiteHeader() {
     <header className={`site-header page-shell${isScrolled ? " is-scrolled" : ""}`}>
       <a className="brand header-brand" href="#top" aria-label="Coorder home">
         <span className="brand-mark">
-          <img src="/assets/coorder-logo.png" alt="" />
+          <img src={sitePath("/assets/coorder-logo.png")} alt="" />
         </span>
         <span>
           <strong>Coorder</strong>
