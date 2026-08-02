@@ -34,6 +34,9 @@ test("server-renders the finished Coorder landing page", async () => {
   assert.match(html, /hero-wordmark/);
   assert.match(html, /hero-wordmark-logo/);
   assert.match(html, /header-brand/);
+  assert.doesNotMatch(html, /See how it works/);
+  assert.doesNotMatch(html, /Built for restaurant rhythm/);
+  assert.doesNotMatch(html, /One shared picture/);
   assert.match(html, /Coorder works on its own/);
   assert.match(html, /optional Clover integration/i);
   assert.doesNotMatch(html, /Coorder connects Clover with a clear/);

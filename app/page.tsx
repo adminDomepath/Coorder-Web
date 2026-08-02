@@ -103,10 +103,10 @@ function HeroWordmark() {
       <img className="hero-wordmark-logo" src="/assets/coorder-logo.png" alt="" aria-hidden="true" />
       <span className="hero-wordmark-text" aria-hidden="true">
         <span className="wordmark-blue">CO</span>
-        <span className="wordmark-green">O</span>
-        <span className="wordmark-orange">R</span>
-        <span className="wordmark-purple">D</span>
-        <span className="wordmark-teal">E</span>
+        <span className="wordmark-purple">O</span>
+        <span className="wordmark-teal">R</span>
+        <span className="wordmark-green">D</span>
+        <span className="wordmark-orange">E</span>
         <span className="wordmark-red">R</span>
       </span>
     </div>
@@ -133,12 +133,8 @@ export default function Home() {
       <section className="hero page-shell">
         <div className="hero-copy">
           <HeroWordmark />
-          <div className="hero-kicker"><span className="kicker-dot" /> Built for restaurant rhythm</div>
           <h1>Every order,<br /><em>exactly where</em><br />your team needs it.</h1>
           <p>Coorder gives restaurant teams a clear, visual workspace on Apple devices to organize, prepare, and track every order—whether it is entered directly or synchronized through an optional integration.</p>
-          <div className="hero-actions">
-            <a className="button button-primary" href="#workflow">See how it works <span>↓</span></a>
-          </div>
           <div className="availability"><span>Designed for iPad and compatible Apple devices</span><i /></div>
           <ColorRibbon />
         </div>
@@ -148,7 +144,6 @@ export default function Home() {
       <section className="statement-section">
         <div className="pattern-strip" aria-hidden="true" />
         <div className="statement page-shell">
-          <span className="section-label">One shared picture</span>
           <h2>Every order becomes a workspace the whole team can understand.</h2>
           <p>From the first item to the final handoff, Coorder keeps the operational details visible and organized.</p>
         </div>
