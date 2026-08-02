@@ -29,7 +29,7 @@ test("server-renders the finished Coorder landing page", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /Every order,/);
+  assert.match(html, /One clear flow,/);
   assert.match(html, /Build complete tickets/);
   assert.match(html, /hero-wordmark/);
   assert.match(html, /hero-wordmark-logo/);
@@ -45,8 +45,8 @@ test("server-renders the finished Coorder landing page", async () => {
   assert.match(html, /\/assets\/coorder-kanban-ipad\.png/);
   assert.match(html, /Contact us/);
   assert.doesNotMatch(html, /Contact Leonardo/);
-  assert.match(html, /Clear terms\. Transparent data practices\./);
-  assert.match(html, /End User License Agreement/);
+  assert.doesNotMatch(html, /Clear terms\. Transparent data practices\./);
+  assert.doesNotMatch(html, /legal-section/);
   assert.match(html, /leonardo\.arias@domepath\.com/);
   assert.match(html, /\/legal\/privacy\//);
   assert.match(html, /\/legal\/eula\//);

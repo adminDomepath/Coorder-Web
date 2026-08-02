@@ -133,7 +133,7 @@ export default function Home() {
       <section className="hero page-shell">
         <div className="hero-copy">
           <HeroWordmark />
-          <h1>Every order,<br /><em>exactly where</em><br />your team needs it.</h1>
+          <h1>One clear flow,<br /><em>from order entry</em><br />to final handoff.</h1>
           <p>Build orders from your menu, route each ticket to the right work area, follow preparation on Kanban, and give the team a focused live display. Coorder keeps items, modifiers, notes, timers, inventory context, and status updates together from entry to handoff.</p>
           <div className="availability"><span>Designed for iPad and compatible Apple devices</span><i /></div>
           <ColorRibbon />
@@ -185,7 +185,6 @@ export default function Home() {
       <section className="clover-section page-shell" id="clover">
         <div className="clover-card">
           <div className="clover-copy">
-            <span className="section-label">Optional Clover integration</span>
             <h2>Coorder works on its own.<br />Clover can make intake automatic.</h2>
             <p>Coorder handles the restaurant workflow independently. When a Clover merchant is connected, eligible point-of-sale orders can enter that same workflow automatically while Clover remains the source for payments.</p>
             <ul>
@@ -202,38 +201,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="legal-section page-shell" id="legal">
-        <div className="legal-heading">
-          <span className="section-label">Legal &amp; privacy</span>
-          <h2>Clear terms. Transparent data practices.</h2>
-          <p>Review how Coorder handles account, restaurant, order, and optional integration information, along with the terms governing the service.</p>
-        </div>
-        <div className="legal-grid">
-          <a className="legal-card privacy-card" href="/legal/privacy/">
-            <span className="legal-icon">◉</span>
-            <div>
-              <small>Privacy Policy</small>
-              <h3>Understand how Coorder protects your data.</h3>
-              <p>See what Coorder processes to provide the app, how optional integrations are handled, and the controls available to merchants.</p>
-            </div>
-            <span className="legal-arrow">↗</span>
-          </a>
-          <a className="legal-card eula-card" href="/legal/eula/">
-            <span className="legal-icon">✓</span>
-            <div>
-              <small>End User License Agreement</small>
-              <h3>Review the terms for using Coorder.</h3>
-              <p>Read the license, service responsibilities, acceptable-use terms, and conditions for Coorder and its optional integrations.</p>
-            </div>
-            <span className="legal-arrow">↗</span>
-          </a>
-        </div>
-      </section>
-
       <section className="final-cta page-shell">
         <img className="cta-logo" src="/assets/coorder-logo.png" alt="" aria-hidden="true" />
         <div>
-          <span className="section-label">Ready when your team is</span>
           <h2>Give every order a clearer path.</h2>
           <p>Bring your restaurant workflow to Apple devices with Coorder—and connect Clover only when it adds value to your operation.</p>
         </div>

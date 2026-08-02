@@ -27,7 +27,6 @@ export default function SiteHeader() {
         <a href="#features">Features</a>
         <a href="#workflow">How it works</a>
         <a href="#clover">Clover</a>
-        <a href="#legal">Legal</a>
       </nav>
     </header>
   );
