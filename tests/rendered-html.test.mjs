@@ -31,6 +31,8 @@ test("server-renders the finished Coorder landing page", async () => {
   const html = await response.text();
   assert.match(html, /Every order,/);
   assert.match(html, /Clover orders, automatically in Coorder/);
+  assert.match(html, /Clear terms\. Transparent data practices\./);
+  assert.match(html, /End User License Agreement/);
   assert.match(html, /leonardo\.arias@domepath\.com/);
   assert.match(html, /\/legal\/privacy\//);
   assert.match(html, /\/legal\/eula\//);
@@ -52,6 +54,7 @@ test("ships the complete Coorder brand and legal surface", async () => {
   for (const legalPage of [privacy, eula]) {
     assert.match(legalPage, /https:\/\/coorder\.domepath\.com/);
     assert.match(legalPage, /leonardo\.arias@domepath\.com/);
+    assert.match(legalPage, /\/assets\/coorder-logo\.png/);
     assert.doesNotMatch(legalPage, /admin@domepath\.com/);
   }
 

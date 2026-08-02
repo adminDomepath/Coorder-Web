@@ -99,8 +99,6 @@ function ColorRibbon() {
 function ProductPreview() {
   return (
     <div className="product-preview" aria-label="Preview of the Coorder Kanban workspace">
-      <div className="preview-glow preview-glow-blue" />
-      <div className="preview-glow preview-glow-green" />
       <div className="app-window">
         <div className="window-topbar">
           <div className="window-brand">
@@ -158,14 +156,6 @@ function ProductPreview() {
           </div>
         </div>
       </div>
-      <div className="floating-note floating-note-left">
-        <span className="note-icon">↻</span>
-        <span><strong>Synced from Clover</strong><small>Order #1043</small></span>
-      </div>
-      <div className="floating-note floating-note-right">
-        <span className="note-icon check">✓</span>
-        <span><strong>Order ready</strong><small>Everyone stays aligned</small></span>
-      </div>
     </div>
   );
 }
@@ -179,8 +169,8 @@ export default function Home() {
           <a href="#features">Features</a>
           <a href="#workflow">How it works</a>
           <a href="#clover">Clover</a>
+          <a href="#legal">Legal</a>
         </nav>
-        <a className="header-contact" href="mailto:leonardo.arias@domepath.com">Contact us <span>↗</span></a>
       </header>
 
       <section className="hero page-shell">
@@ -190,7 +180,6 @@ export default function Home() {
           <p>Coorder connects Clover with a clear, visual workspace on Apple devices—so your restaurant can organize, prepare, and track every order without losing the flow.</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#workflow">See how it works <span>↓</span></a>
-            <a className="button button-secondary" href="mailto:leonardo.arias@domepath.com">Talk to DomePath</a>
           </div>
           <div className="availability"><span>Designed for iPad and compatible Apple devices</span><i /></div>
           <ColorRibbon />
@@ -232,7 +221,6 @@ export default function Home() {
             <span className="section-label">A simple connection</span>
             <h2>From Clover to Coorder in three clear steps.</h2>
             <p>Your credentials and Clover tokens stay in the secure backend. The Apple app only needs the Merchant ID and one-time connection code to complete setup.</p>
-            <a href="mailto:leonardo.arias@domepath.com">Need help connecting? <span>↗</span></a>
           </div>
           <div className="workflow-steps">
             {workflow.map((step, index) => (
@@ -262,6 +250,34 @@ export default function Home() {
             <div className="connection-line"><i /><i /><i /></div>
             <div className="connection-node coorder-node"><img src="/assets/coorder-logo.png" alt="" /><span>Coorder</span><small>Order workflow</small></div>
           </div>
+        </div>
+      </section>
+
+      <section className="legal-section page-shell" id="legal">
+        <div className="legal-heading">
+          <span className="section-label">Legal &amp; privacy</span>
+          <h2>Clear terms. Transparent data practices.</h2>
+          <p>Review how Coorder handles merchant information and the terms that govern use of the Clover-connected service.</p>
+        </div>
+        <div className="legal-grid">
+          <a className="legal-card privacy-card" href="/legal/privacy/">
+            <span className="legal-icon">◉</span>
+            <div>
+              <small>Privacy Policy</small>
+              <h3>Understand how Coorder protects your data.</h3>
+              <p>See what information is processed when Coorder connects with Clover, how it is used, and the controls available to merchants.</p>
+            </div>
+            <span className="legal-arrow">↗</span>
+          </a>
+          <a className="legal-card eula-card" href="/legal/eula/">
+            <span className="legal-icon">✓</span>
+            <div>
+              <small>End User License Agreement</small>
+              <h3>Review the terms for using Coorder.</h3>
+              <p>Read the license, service responsibilities, acceptable-use terms, and conditions for the Coorder Clover integration.</p>
+            </div>
+            <span className="legal-arrow">↗</span>
+          </a>
         </div>
       </section>
 

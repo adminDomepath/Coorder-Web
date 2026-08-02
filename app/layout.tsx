@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 
-const geist = Geist({
-  variable: "--font-geist",
+const nunito = Nunito({
+  variable: "--font-nunito",
   subsets: ["latin"],
 });
 
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og.png",
-        width: 1731,
-        height: 909,
+        width: 1200,
+        height: 630,
         alt: "Coorder — Every order, exactly where your team needs it",
       },
     ],
@@ -53,7 +53,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={geist.variable}>{children}</body>
+      <body className={nunito.variable}>{children}</body>
     </html>
   );
 }
