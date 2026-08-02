@@ -98,61 +98,40 @@ function ColorRibbon() {
 
 function ProductPreview() {
   return (
-    <div className="product-preview" aria-label="Preview of the Coorder Kanban workspace">
-      <div className="app-window">
-        <div className="window-topbar">
-          <div className="window-brand">
-            <img src="/assets/coorder-logo.png" alt="" />
-            <span>Coorder</span>
-          </div>
-          <div className="window-tabs" aria-hidden="true">
+    <div className="product-preview" aria-label="Coorder Kanban as shown on iPad">
+      <div className="ipad-frame">
+        <div className="ipad-camera" />
+        <div className="ipad-screen">
+          <div className="ipad-tabbar" aria-hidden="true">
+            <span>New</span>
             <span>Orders</span>
+            <span>Display</span>
             <span className="active">Kanban</span>
             <span>Inventory</span>
+            <span>Settings</span>
           </div>
-          <span className="connection-pill"><i /> Clover connected</span>
-        </div>
-
-        <div className="kanban-board">
-          <div className="kanban-column">
-            <div className="column-heading"><span>New</span><b>2</b></div>
-            <article className="order-card accent-blue">
-              <div className="order-meta"><strong>#1042</strong><span>2 min</span></div>
-              <p>2 × Chicken Tacos</p>
-              <p>1 × Citrus Soda</p>
-              <small>Dine In · Clover</small>
-            </article>
-            <article className="order-card accent-purple compact-card">
-              <div className="order-meta"><strong>#1043</strong><span>Just now</span></div>
-              <p>1 × Veggie Bowl</p>
-              <small>To Go · Clover</small>
-            </article>
-          </div>
-
-          <div className="kanban-column highlighted-column">
-            <div className="column-heading"><span>Preparing</span><b>2</b></div>
-            <article className="order-card accent-orange">
-              <div className="order-meta"><strong>#1040</strong><span>8 min</span></div>
-              <p>1 × House Burger</p>
-              <p>1 × Truffle Fries</p>
-              <div className="progress-line"><i /></div>
-              <small>Online · Clover</small>
-            </article>
-            <article className="order-card accent-teal compact-card">
-              <div className="order-meta"><strong>#1041</strong><span>5 min</span></div>
-              <p>3 × Green Salad</p>
-              <small>Pickup · Clover</small>
-            </article>
-          </div>
-
-          <div className="kanban-column">
-            <div className="column-heading"><span>Ready</span><b>1</b></div>
-            <article className="order-card accent-green">
-              <div className="order-meta"><strong>#1039</strong><span>12 min</span></div>
-              <p>2 × Margherita Pizza</p>
-              <div className="ready-label">Ready for pickup</div>
-              <small>Pickup · Clover</small>
-            </article>
+          <div className="real-kanban">
+            <div className="kanban-ambient" aria-hidden="true">
+              <img src="/assets/coorder-logo.png" alt="" />
+              <div><strong>10:38</strong><span>August 2</span></div>
+            </div>
+            <div className="kanban-order-row">
+              <article className="ipad-order-card blue-order">
+                <header><strong>#1042 · Dine In</strong><span>2:18</span></header>
+                <div className="ipad-item"><b>2</b><span>Chicken Tacos<small>No onions</small></span><i>Preparing</i></div>
+                <div className="ipad-item"><b>1</b><span>Citrus Soda</span><i>Preparing</i></div>
+              </article>
+              <article className="ipad-order-card orange-order">
+                <header><strong>#1040 · Online</strong><span>8:04</span></header>
+                <div className="ipad-item"><b>1</b><span>House Burger<small>Truffle fries</small></span><i>Cooking</i></div>
+                <div className="ipad-item cooked"><b>1</b><span>Garden Salad</span><i>Cooked</i></div>
+              </article>
+              <article className="ipad-order-card green-order">
+                <header><strong>#1039 · Pickup</strong><span>12:31</span></header>
+                <div className="ipad-item cooked"><b>2</b><span>Margherita Pizza</span><i>Cooked</i></div>
+                <button type="button" tabIndex={-1}>Complete</button>
+              </article>
+            </div>
           </div>
         </div>
       </div>
@@ -288,7 +267,7 @@ export default function Home() {
           <h2>Give every order a clearer path.</h2>
           <p>Connect Clover with Coorder and bring your restaurant workflow to Apple devices.</p>
         </div>
-        <a className="button button-dark" href="mailto:leonardo.arias@domepath.com">Contact Leonardo <span>↗</span></a>
+        <a className="button button-dark" href="mailto:leonardo.arias@domepath.com">Contact us <span>↗</span></a>
       </section>
 
       <footer className="site-footer">
