@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SiteHeader from "./SiteHeader";
 
 export const metadata: Metadata = {
   title: "Coorder — A clearer workflow for every order",
@@ -99,12 +100,15 @@ function ColorRibbon() {
 function HeroWordmark() {
   return (
     <div className="hero-wordmark" aria-label="Coorder">
-      <span className="wordmark-blue" aria-hidden="true">C</span>
-      <span className="wordmark-green" aria-hidden="true">OO</span>
-      <span className="wordmark-orange" aria-hidden="true">R</span>
-      <span className="wordmark-purple" aria-hidden="true">D</span>
-      <span className="wordmark-teal" aria-hidden="true">E</span>
-      <span className="wordmark-red" aria-hidden="true">R</span>
+      <img className="hero-wordmark-logo" src="/assets/coorder-logo.png" alt="" aria-hidden="true" />
+      <span className="hero-wordmark-text" aria-hidden="true">
+        <span className="wordmark-blue">CO</span>
+        <span className="wordmark-green">O</span>
+        <span className="wordmark-orange">R</span>
+        <span className="wordmark-purple">D</span>
+        <span className="wordmark-teal">E</span>
+        <span className="wordmark-red">R</span>
+      </span>
     </div>
   );
 }
@@ -124,15 +128,7 @@ function ProductPreview() {
 export default function Home() {
   return (
     <main id="top">
-      <header className="site-header page-shell">
-        <Brand />
-        <nav aria-label="Main navigation">
-          <a href="#features">Features</a>
-          <a href="#workflow">How it works</a>
-          <a href="#clover">Clover</a>
-          <a href="#legal">Legal</a>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <section className="hero page-shell">
         <div className="hero-copy">

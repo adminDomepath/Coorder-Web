@@ -34,12 +34,19 @@ h1, h2, h3 { font-weight: 700; }
 .page-shell { width: min(1180px, calc(100% - 44px)); margin-inline: auto; }
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
   min-height: 88px;
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 24px;
+  transition: background .25s ease, box-shadow .25s ease;
 }
+.site-header.is-scrolled { background: rgba(242, 242, 246, .88); box-shadow: 0 10px 30px rgba(23, 32, 28, .08); backdrop-filter: blur(18px); }
+.header-brand { opacity: 0; pointer-events: none; transform: translateY(-8px); transition: opacity .25s ease, transform .25s ease; }
+.site-header.is-scrolled .header-brand { opacity: 1; pointer-events: auto; transform: translateY(0); }
 
 .brand { display: inline-flex; width: max-content; align-items: center; gap: 11px; text-decoration: none; }
 .brand-mark {
@@ -61,8 +68,11 @@ h1, h2, h3 { font-weight: 700; }
 
 .hero { min-height: 750px; display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 50px; padding-block: 68px 94px; }
 .hero-copy { position: relative; z-index: 2; }
-.hero-wordmark { display: flex; align-items: baseline; gap: .045em; margin: 0 0 24px; font-size: clamp(58px, 7.4vw, 104px); font-weight: 900; line-height: .8; letter-spacing: .015em; }
-.hero-wordmark span { display: inline-block; }
+.hero-wordmark { display: flex; align-items: center; gap: 18px; margin: 0 0 30px; font-size: clamp(52px, 5.8vw, 78px); font-weight: 900; line-height: .8; letter-spacing: -.025em; }
+.hero-wordmark-logo { width: 1.08em; height: 1.08em; flex: 0 0 auto; object-fit: contain; }
+.hero-wordmark-text { display: flex; align-items: baseline; gap: .035em; }
+.hero-wordmark-text > span { display: inline-block; }
+.hero-wordmark-text .wordmark-blue { margin-right: .095em; }
 .hero-wordmark .wordmark-blue { color: var(--blue); }
 .hero-wordmark .wordmark-green { color: var(--green); }
 .hero-wordmark .wordmark-orange { color: var(--orange); }
@@ -198,7 +208,7 @@ h1, h2, h3 { font-weight: 700; }
   .site-header { min-height: 78px; grid-template-columns: 1fr auto; }
   .site-header nav { display: none; }
   .hero { min-height: auto; gap: 32px; padding-block: 52px 80px; }
-  .hero-wordmark { margin-bottom: 22px; font-size: clamp(52px, 17vw, 82px); }
+  .hero-wordmark { gap: 10px; margin-bottom: 26px; font-size: clamp(40px, 11.5vw, 58px); }
   .hero h1 { font-size: clamp(47px, 14vw, 68px); }
   .hero-copy > p { font-size: 16px; }
   .product-preview { width: 100%; margin-top: 20px; }
