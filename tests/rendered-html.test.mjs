@@ -30,7 +30,10 @@ test("server-renders the finished Coorder landing page", async () => {
 
   const html = await response.text();
   assert.match(html, /Every order,/);
-  assert.match(html, /Clover orders, automatically in Coorder/);
+  assert.match(html, /Every order in one workspace/);
+  assert.match(html, /Coorder works on its own/);
+  assert.match(html, /optional Clover integration/i);
+  assert.doesNotMatch(html, /Coorder connects Clover with a clear/);
   assert.match(html, /Real Coorder Kanban running as an iPad app/);
   assert.match(html, /\/assets\/coorder-kanban-ipad\.png/);
   assert.match(html, /Contact us/);

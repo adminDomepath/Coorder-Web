@@ -165,15 +165,9 @@ h1, h2, h3 { font-weight: 700; }
 .final-cta .section-label { color: #617632; }
 .final-cta h2 { font-size: clamp(40px, 5.4vw, 66px); }
 .final-cta p { max-width: 620px; margin: 18px 0 0; color: var(--muted); font-size: 16px; line-height: 1.6; }
+.final-cta > div { position: relative; z-index: 1; }
 .button-dark { position: relative; z-index: 2; color: var(--ink); background: var(--green); }
-.cta-colors { position: absolute; right: -75px; top: -100px; width: 360px; height: 290px; opacity: .22; transform: rotate(-9deg); }
-.cta-colors i { position: absolute; width: 92px; border-radius: 36px; }
-.cta-colors i:nth-child(1) { left: 0; top: 20px; height: 92px; background: var(--blue); }
-.cta-colors i:nth-child(2) { left: 104px; top: 0; height: 160px; background: var(--green); }
-.cta-colors i:nth-child(3) { left: 208px; top: 28px; height: 210px; background: var(--orange); }
-.cta-colors i:nth-child(4) { left: 0; top: 124px; height: 170px; background: var(--purple); }
-.cta-colors i:nth-child(5) { left: 104px; top: 172px; height: 120px; background: var(--teal); }
-.cta-colors i:nth-child(6) { left: 208px; top: 248px; height: 72px; background: var(--red); }
+.cta-logo { position: absolute; right: -18px; top: -145px; width: 360px; max-width: none; opacity: .18; mix-blend-mode: multiply; transform: rotate(-7deg); }
 
 .site-footer { padding: 52px 0 38px; border-top: 1px solid var(--line); background: #fff; }
 .footer-inner { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 32px; }
@@ -215,6 +209,7 @@ h1, h2, h3 { font-weight: 700; }
   .legal-grid { grid-template-columns: 1fr; }
   .legal-card { min-height: 300px; padding: 27px; }
   .final-cta { grid-template-columns: 1fr; align-items: start; margin-bottom: 70px; padding: 38px 26px; }
+  .cta-logo { right: -48px; top: -54px; width: 230px; opacity: .14; }
   .button-dark { width: max-content; }
   .footer-inner { grid-template-columns: 1fr; }
   .footer-inner > p { margin: 0; }

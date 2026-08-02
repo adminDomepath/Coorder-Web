@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Coorder — A clearer workflow for every order",
   description:
-    "Connect Clover with Coorder on Apple devices and give your restaurant team a visual workspace for every order.",
+    "Organize, prepare, and track restaurant orders in a visual workspace for Apple devices—with an optional Clover integration.",
 };
 
 const features = [
   {
     color: "blue",
-    eyebrow: "Connected",
-    symbol: "↻",
-    title: "Clover orders, automatically in Coorder",
-    text: "Order items, quantities, modifiers, notes, and order types arrive in the workspace your team already uses.",
+    eyebrow: "Organized",
+    symbol: "+",
+    title: "Every order in one workspace",
+    text: "Create and organize orders with items, quantities, modifiers, notes, order types, and the details your team needs.",
   },
   {
     color: "green",
@@ -37,35 +37,35 @@ const features = [
   },
   {
     color: "teal",
-    eyebrow: "Mapped",
+    eyebrow: "Structured",
     symbol: "◇",
-    title: "Connect menu items to inventory",
-    text: "Match Clover items with Coorder inventory so every synchronized order lands in the right operational context.",
+    title: "Connect orders to your inventory",
+    text: "Structure categories, menu items, modifiers, work areas, and order types around your restaurant’s operation.",
   },
   {
     color: "red",
-    eyebrow: "Recoverable",
-    symbol: "✓",
-    title: "Know when attention is needed",
-    text: "Connection checks and recovery tools help your team identify unresolved items or retry failed order syncs.",
+    eyebrow: "Optional",
+    symbol: "↻",
+    title: "Add Clover when it fits your operation",
+    text: "Coorder works independently. Restaurants using Clover can also connect their merchant account for automatic order synchronization.",
   },
 ];
 
 const workflow = [
   {
     number: "01",
-    title: "Authorize Coorder in Clover",
-    text: "Install Coorder from the Clover App Market and authorize the restaurant merchant account.",
+    title: "Shape your restaurant workspace",
+    text: "Configure order types, menu items, work areas, colors, inventory, and the workflow that matches your team.",
   },
   {
     number: "02",
-    title: "Connect the Apple app",
-    text: "Enter the Merchant ID and one-time connection code in Coorder on your iPad or compatible Apple device.",
+    title: "Create and move every order",
+    text: "Add orders in Coorder, follow preparation in Kanban, and give service or kitchen teams a focused display.",
   },
   {
     number: "03",
-    title: "Let orders find their place",
-    text: "New Clover orders are organized in Coorder, ready for your team to prepare, track, and complete.",
+    title: "Connect Clover if you choose",
+    text: "Clover merchants can enable optional automatic order sync. Everyone else can continue using the complete Coorder workflow on its own.",
   },
 ];
 
@@ -125,7 +125,7 @@ export default function Home() {
         <div className="hero-copy">
           <div className="hero-kicker"><span className="kicker-dot" /> Built for restaurant rhythm</div>
           <h1>Every order,<br /><em>exactly where</em><br />your team needs it.</h1>
-          <p>Coorder connects Clover with a clear, visual workspace on Apple devices—so your restaurant can organize, prepare, and track every order without losing the flow.</p>
+          <p>Coorder gives restaurant teams a clear, visual workspace on Apple devices to organize, prepare, and track every order—whether it is entered directly or synchronized through an optional integration.</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#workflow">See how it works <span>↓</span></a>
           </div>
@@ -139,7 +139,7 @@ export default function Home() {
         <div className="pattern-strip" aria-hidden="true" />
         <div className="statement page-shell">
           <span className="section-label">One shared picture</span>
-          <h2>Your Clover orders become a workspace the whole team can understand.</h2>
+          <h2>Every order becomes a workspace the whole team can understand.</h2>
           <p>From the first item to the final handoff, Coorder keeps the operational details visible and organized.</p>
         </div>
       </section>
@@ -150,7 +150,7 @@ export default function Home() {
             <span className="section-label">Made for the work between order and handoff</span>
             <h2>Clarity in every part of the shift.</h2>
           </div>
-          <p>Coorder complements Clover with the visual tools restaurant teams need after an order is placed.</p>
+          <p>Coorder brings orders, preparation, inventory context, and team handoffs into one visual operating system for the shift.</p>
         </div>
         <div className="feature-grid">
           {features.map((feature) => (
@@ -166,9 +166,9 @@ export default function Home() {
       <section className="workflow-section" id="workflow">
         <div className="page-shell workflow-layout">
           <div className="workflow-intro">
-            <span className="section-label">A simple connection</span>
-            <h2>From Clover to Coorder in three clear steps.</h2>
-            <p>Your credentials and Clover tokens stay in the secure backend. The Apple app only needs the Merchant ID and one-time connection code to complete setup.</p>
+            <span className="section-label">A simple workflow</span>
+            <h2>From a new order to a clear handoff.</h2>
+            <p>Start with Coorder on your Apple devices and adapt the workspace to the way your restaurant already operates. Clover can be added later when automatic synchronization is useful.</p>
           </div>
           <div className="workflow-steps">
             {workflow.map((step, index) => (
@@ -184,13 +184,13 @@ export default function Home() {
       <section className="clover-section page-shell" id="clover">
         <div className="clover-card">
           <div className="clover-copy">
-            <span className="section-label">Clover connected</span>
-            <h2>Clover handles the order.<br />Coorder helps your team move it.</h2>
-            <p>Keep Clover as the source of your restaurant’s orders and payments while Coorder gives preparation teams a focused operational view.</p>
+            <span className="section-label">Optional Clover integration</span>
+            <h2>Coorder works on its own.<br />Clover can make intake automatic.</h2>
+            <p>Use the complete Coorder workflow independently, or connect a Clover merchant account so eligible orders arrive automatically while Clover remains the source for point-of-sale and payments.</p>
             <ul>
-              <li><span>✓</span> Secure OAuth authorization</li>
-              <li><span>✓</span> Automatic order synchronization</li>
-              <li><span>✓</span> Merchant-controlled connection</li>
+              <li><span>✓</span> Full Coorder workflow without Clover</li>
+              <li><span>✓</span> Optional automatic order synchronization</li>
+              <li><span>✓</span> Secure, merchant-controlled connection</li>
             </ul>
           </div>
           <div className="connection-visual" aria-label="Clover connected to Coorder">
@@ -205,7 +205,7 @@ export default function Home() {
         <div className="legal-heading">
           <span className="section-label">Legal &amp; privacy</span>
           <h2>Clear terms. Transparent data practices.</h2>
-          <p>Review how Coorder handles merchant information and the terms that govern use of the Clover-connected service.</p>
+          <p>Review how Coorder handles account, restaurant, order, and optional integration information, along with the terms governing the service.</p>
         </div>
         <div className="legal-grid">
           <a className="legal-card privacy-card" href="/legal/privacy/">
@@ -213,7 +213,7 @@ export default function Home() {
             <div>
               <small>Privacy Policy</small>
               <h3>Understand how Coorder protects your data.</h3>
-              <p>See what information is processed when Coorder connects with Clover, how it is used, and the controls available to merchants.</p>
+              <p>See what Coorder processes to provide the app, how optional integrations are handled, and the controls available to merchants.</p>
             </div>
             <span className="legal-arrow">↗</span>
           </a>
@@ -222,7 +222,7 @@ export default function Home() {
             <div>
               <small>End User License Agreement</small>
               <h3>Review the terms for using Coorder.</h3>
-              <p>Read the license, service responsibilities, acceptable-use terms, and conditions for the Coorder Clover integration.</p>
+              <p>Read the license, service responsibilities, acceptable-use terms, and conditions for Coorder and its optional integrations.</p>
             </div>
             <span className="legal-arrow">↗</span>
           </a>
@@ -230,11 +230,11 @@ export default function Home() {
       </section>
 
       <section className="final-cta page-shell">
-        <div className="cta-colors" aria-hidden="true"><i /><i /><i /><i /><i /><i /></div>
+        <img className="cta-logo" src="/assets/coorder-logo.png" alt="" aria-hidden="true" />
         <div>
           <span className="section-label">Ready when your team is</span>
           <h2>Give every order a clearer path.</h2>
-          <p>Connect Clover with Coorder and bring your restaurant workflow to Apple devices.</p>
+          <p>Bring your restaurant workflow to Apple devices with Coorder—and connect Clover only when it adds value to your operation.</p>
         </div>
         <a className="button button-dark" href="mailto:leonardo.arias@domepath.com">Contact us <span>↗</span></a>
       </section>

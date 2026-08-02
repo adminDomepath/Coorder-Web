@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s · Coorder",
   },
   description:
-    "Connect Clover with Coorder on Apple devices and give your restaurant team a clearer visual workflow for every order.",
+    "Organize, prepare, and track restaurant orders in a visual workspace for Apple devices, with an optional Clover integration.",
   icons: {
     icon: "/assets/coorder-logo.png",
     shortcut: "/assets/coorder-logo.png",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "Coorder",
     title: "Coorder — Every order, exactly where your team needs it",
     description:
-      "Connect Clover with a clear, visual order workflow designed for Apple devices.",
+      "A clear, visual restaurant order workflow for Apple devices, with an optional Clover integration.",
     url: "https://coorder.domepath.com",
     images: [
       {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Coorder — A clearer workflow for every order",
     description:
-      "Connect Clover with a visual order workspace on Apple devices.",
+      "Visual restaurant order management for Apple devices, with optional Clover synchronization.",
     images: ["/og.png"],
   },
 };
