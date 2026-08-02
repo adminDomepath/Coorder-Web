@@ -30,10 +30,11 @@ test("server-renders the finished Coorder landing page", async () => {
 
   const html = await response.text();
   assert.match(html, /Every order,/);
-  assert.match(html, /Every order in one workspace/);
+  assert.match(html, /Build complete tickets/);
   assert.match(html, /hero-wordmark/);
   assert.match(html, /hero-wordmark-logo/);
   assert.match(html, /header-brand/);
+  assert.match(html, /\/assets\/clover-logo\.png/);
   assert.doesNotMatch(html, /See how it works/);
   assert.doesNotMatch(html, /Built for restaurant rhythm/);
   assert.doesNotMatch(html, /One shared picture/);
@@ -75,6 +76,7 @@ test("ships the complete Coorder brand and legal surface", async () => {
 
   await Promise.all([
     access(new URL("../public/assets/coorder-logo.png", import.meta.url)),
+    access(new URL("../public/assets/clover-logo.png", import.meta.url)),
     access(new URL("../public/assets/coorder-pattern.png", import.meta.url)),
     access(new URL("../public/assets/coorder-kanban-ipad.png", import.meta.url)),
     access(new URL("../public/og.png", import.meta.url)),

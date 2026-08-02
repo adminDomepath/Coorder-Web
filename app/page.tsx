@@ -12,61 +12,61 @@ const features = [
     color: "blue",
     eyebrow: "Organized",
     symbol: "+",
-    title: "Every order in one workspace",
-    text: "Create and organize orders with items, quantities, modifiers, notes, order types, and the details your team needs.",
+    title: "Build complete tickets",
+    text: "Add menu items, quantities, modifiers, notes, order type, and customer context without losing the details the kitchen needs.",
   },
   {
     color: "green",
     eyebrow: "Visual",
     symbol: "▦",
-    title: "A workflow everyone can read",
-    text: "Move work from new to preparing to delivered with a clear Kanban board built for restaurant pace.",
+    title: "Move work through Kanban",
+    text: "Take each order from new to preparing, ready, and delivered while every station sees the same current status.",
   },
   {
     color: "orange",
     eyebrow: "Focused",
     symbol: "◎",
-    title: "A dedicated order display",
-    text: "Give the kitchen or service team a focused view of active orders, preparation time, and item progress.",
+    title: "Run a focused live display",
+    text: "Give the kitchen or service team a clean view of active tickets, elapsed time, item progress, and the next handoff.",
   },
   {
     color: "purple",
     eyebrow: "Flexible",
     symbol: "⌁",
-    title: "Your restaurant, your structure",
-    text: "Customize work areas, order types, colors, statuses, and board organization around the way your team operates.",
+    title: "Match your actual operation",
+    text: "Configure work areas, order types, colors, statuses, and board organization around your floor and kitchen.",
   },
   {
     color: "teal",
     eyebrow: "Structured",
     symbol: "◇",
-    title: "Connect orders to your inventory",
-    text: "Structure categories, menu items, modifiers, work areas, and order types around your restaurant’s operation.",
+    title: "Maintain a structured menu",
+    text: "Keep categories, items, modifiers, inventory context, work areas, and order types organized in one system.",
   },
   {
     color: "red",
     eyebrow: "Optional",
     symbol: "↻",
-    title: "Add Clover when it fits your operation",
-    text: "Coorder works independently. Restaurants using Clover can also connect their merchant account for automatic order synchronization.",
+    title: "Receive Clover orders automatically",
+    text: "Optionally connect a merchant account so eligible Clover orders enter the same Coorder workflow without manual re-entry.",
   },
 ];
 
 const workflow = [
   {
     number: "01",
-    title: "Shape your restaurant workspace",
-    text: "Configure order types, menu items, work areas, colors, inventory, and the workflow that matches your team.",
+    title: "Configure the menu and stations",
+    text: "Set up items, modifiers, order types, work areas, statuses, colors, and the inventory context your team uses.",
   },
   {
     number: "02",
-    title: "Create and move every order",
-    text: "Add orders in Coorder, follow preparation in Kanban, and give service or kitchen teams a focused display.",
+    title: "Capture and route each order",
+    text: "Build the ticket once, preserve its notes and modifiers, and make the work visible to the correct preparation area.",
   },
   {
     number: "03",
-    title: "Connect Clover if you choose",
-    text: "Clover merchants can enable optional automatic order sync. Everyone else can continue using the complete Coorder workflow on its own.",
+    title: "Track preparation to handoff",
+    text: "Move tickets through Kanban, monitor elapsed time on Display, and keep service aligned through completion.",
   },
 ];
 
@@ -134,7 +134,7 @@ export default function Home() {
         <div className="hero-copy">
           <HeroWordmark />
           <h1>Every order,<br /><em>exactly where</em><br />your team needs it.</h1>
-          <p>Coorder gives restaurant teams a clear, visual workspace on Apple devices to organize, prepare, and track every order—whether it is entered directly or synchronized through an optional integration.</p>
+          <p>Build orders from your menu, route each ticket to the right work area, follow preparation on Kanban, and give the team a focused live display. Coorder keeps items, modifiers, notes, timers, inventory context, and status updates together from entry to handoff.</p>
           <div className="availability"><span>Designed for iPad and compatible Apple devices</span><i /></div>
           <ColorRibbon />
         </div>
@@ -144,18 +144,14 @@ export default function Home() {
       <section className="statement-section">
         <div className="pattern-strip" aria-hidden="true" />
         <div className="statement page-shell">
-          <h2>Every order becomes a workspace the whole team can understand.</h2>
-          <p>From the first item to the final handoff, Coorder keeps the operational details visible and organized.</p>
+          <h2>From order entry to handoff, every station sees the same live work.</h2>
+          <p>Tickets retain their items, modifiers, notes, order type, preparation state, and elapsed time while they move through the restaurant.</p>
         </div>
       </section>
 
       <section className="features-section page-shell" id="features">
         <div className="section-heading">
-          <div>
-            <span className="section-label">Made for the work between order and handoff</span>
-            <h2>Clarity in every part of the shift.</h2>
-          </div>
-          <p>Coorder brings orders, preparation, inventory context, and team handoffs into one visual operating system for the shift.</p>
+          <h2>The tools behind each active shift.</h2>
         </div>
         <div className="feature-grid">
           {features.map((feature) => (
@@ -172,8 +168,8 @@ export default function Home() {
         <div className="page-shell workflow-layout">
           <div className="workflow-intro">
             <span className="section-label">A simple workflow</span>
-            <h2>From a new order to a clear handoff.</h2>
-            <p>Start with Coorder on your Apple devices and adapt the workspace to the way your restaurant already operates. Clover can be added later when automatic synchronization is useful.</p>
+            <h2>A working path for every ticket.</h2>
+            <p>Coorder turns menu structure and restaurant settings into a live operational flow: tickets carry the right details into preparation, remain visible while work advances, and finish with a clear status for service.</p>
           </div>
           <div className="workflow-steps">
             {workflow.map((step, index) => (
@@ -191,7 +187,7 @@ export default function Home() {
           <div className="clover-copy">
             <span className="section-label">Optional Clover integration</span>
             <h2>Coorder works on its own.<br />Clover can make intake automatic.</h2>
-            <p>Use the complete Coorder workflow independently, or connect a Clover merchant account so eligible orders arrive automatically while Clover remains the source for point-of-sale and payments.</p>
+            <p>Coorder handles the restaurant workflow independently. When a Clover merchant is connected, eligible point-of-sale orders can enter that same workflow automatically while Clover remains the source for payments.</p>
             <ul>
               <li><span>✓</span> Full Coorder workflow without Clover</li>
               <li><span>✓</span> Optional automatic order synchronization</li>
@@ -199,7 +195,7 @@ export default function Home() {
             </ul>
           </div>
           <div className="connection-visual" aria-label="Clover connected to Coorder">
-            <div className="connection-node clover-node"><span>clover</span><small>Point of sale</small></div>
+            <div className="connection-node clover-node"><img className="clover-logo" src="/assets/clover-logo.png" alt="Clover logo" /><span>Clover</span><small>Point of sale</small></div>
             <div className="connection-line"><i /><i /><i /></div>
             <div className="connection-node coorder-node"><img src="/assets/coorder-logo.png" alt="" /><span>Coorder</span><small>Order workflow</small></div>
           </div>
