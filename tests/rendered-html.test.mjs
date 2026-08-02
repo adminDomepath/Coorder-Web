@@ -31,6 +31,7 @@ test("server-renders the finished Coorder landing page", async () => {
   const html = await response.text();
   assert.match(html, /Every order,/);
   assert.match(html, /Every order in one workspace/);
+  assert.match(html, /hero-wordmark/);
   assert.match(html, /Coorder works on its own/);
   assert.match(html, /optional Clover integration/i);
   assert.doesNotMatch(html, /Coorder connects Clover with a clear/);

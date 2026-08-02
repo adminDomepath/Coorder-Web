@@ -96,6 +96,19 @@ function ColorRibbon() {
   );
 }
 
+function HeroWordmark() {
+  return (
+    <div className="hero-wordmark" aria-label="Coorder">
+      <span className="wordmark-blue" aria-hidden="true">CO</span>
+      <span className="wordmark-green" aria-hidden="true">O</span>
+      <span className="wordmark-orange" aria-hidden="true">R</span>
+      <span className="wordmark-purple" aria-hidden="true">D</span>
+      <span className="wordmark-teal" aria-hidden="true">E</span>
+      <span className="wordmark-red" aria-hidden="true">R</span>
+    </div>
+  );
+}
+
 function ProductPreview() {
   return (
     <div className="product-preview" aria-label="Real Coorder Kanban running as an iPad app">
@@ -123,6 +136,7 @@ export default function Home() {
 
       <section className="hero page-shell">
         <div className="hero-copy">
+          <HeroWordmark />
           <div className="hero-kicker"><span className="kicker-dot" /> Built for restaurant rhythm</div>
           <h1>Every order,<br /><em>exactly where</em><br />your team needs it.</h1>
           <p>Coorder gives restaurant teams a clear, visual workspace on Apple devices to organize, prepare, and track every order—whether it is entered directly or synchronized through an optional integration.</p>
