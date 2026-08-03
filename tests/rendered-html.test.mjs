@@ -78,6 +78,9 @@ test("ships the complete Coorder brand and legal surface", async () => {
     privacy,
     /same or equivalent protection described in this policy/i,
   );
+  assert.match(eula, /background:\s*var\(--blue-soft\)/i);
+  assert.match(eula, /background:\s*var\(--orange-soft\)/i);
+  assert.match(eula, /background:\s*var\(--purple-soft\)/i);
 
   await Promise.all([
     access(new URL("../public/assets/coorder-logo.png", import.meta.url)),
