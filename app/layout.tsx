@@ -3,9 +3,7 @@ import { Nunito } from "next/font/google";
 import "./globals.css";
 import { sitePath } from "./site-path";
 
-const siteUrl = process.env.GITHUB_PAGES === "true"
-  ? "https://admindomepath.github.io/Coorder-Web"
-  : "https://coorder.domepath.com";
+const siteUrl = "https://coorder.domepath.com";
 
 const nunito = Nunito({
   variable: "--font-nunito",
