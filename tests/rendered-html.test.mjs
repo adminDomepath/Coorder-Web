@@ -74,6 +74,11 @@ test("ships the complete Coorder brand and legal surface", async () => {
     assert.doesNotMatch(legalPage, /admin@domepath\.com/);
   }
 
+  assert.match(
+    privacy,
+    /same or equivalent protection described in this policy/i,
+  );
+
   await Promise.all([
     access(new URL("../public/assets/coorder-logo.png", import.meta.url)),
     access(new URL("../public/assets/clover-logo.png", import.meta.url)),
