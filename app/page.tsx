@@ -132,14 +132,14 @@ export default function Home() {
       <SiteHeader />
 
       <section className="hero page-shell">
+        <HeroWordmark />
+        <ProductPreview />
         <div className="hero-copy">
-          <HeroWordmark />
           <h1>One clear flow,<br /><em>from order entry</em><br />to final handoff.</h1>
           <p>Build orders from your menu, route each ticket to the right work area, follow preparation on Kanban, and give the team a focused live display. Coorder keeps items, modifiers, notes, timers, inventory context, and status updates together from entry to handoff.</p>
           <div className="availability"><span>Designed for iPad and compatible Apple devices</span><i /></div>
           <ColorRibbon />
         </div>
-        <ProductPreview />
       </section>
 
       <section className="statement-section">
