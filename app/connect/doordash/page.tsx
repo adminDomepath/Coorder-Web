@@ -3,8 +3,8 @@ import DoorDashPortal from "./portal";
 import "./portal.css";
 
 export const metadata: Metadata = {
-  title: "Conectar DoorDash",
-  description: "Vincula tu restaurante de Coorder con DoorDash y revisa tu menú antes de activar la integración.",
+  title: "Connect DoorDash",
+  description: "Connect your Coorder restaurant to DoorDash and review your menu before activating the integration.",
   referrer: "no-referrer",
   robots: { index: false, follow: false },
 };
