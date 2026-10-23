@@ -1,0 +1,27 @@
+import type { Metadata } from "next";
+import { sitePath } from "../../../site-path";
+import "../portal.css";
+
+export const metadata: Metadata = {
+  title: "Ayuda para conectar DoorDash",
+  description: "Cómo abrir el portal de Coorder, preparar el menú de Clover y conectar tu sucursal de DoorDash.",
+};
+
+export default function DoorDashHelp() {
+  return <main className="dd-portal" lang="es">
+    <header className="dd-header"><a className="brand" href={sitePath("/")}><span className="brand-mark"><img src={sitePath("/assets/coorder-logo.png")} alt="" /></span><span><strong>Coorder</strong><small>by DomePath</small></span></a><a href={sitePath("/connect/doordash/")}>Abrir portal →</a></header>
+    <article className="dd-help">
+      <span className="dd-badge">DoorDash · Sandbox</span>
+      <h1>Conecta tu restaurante paso a paso.</h1>
+      <p>Este flujo permite preparar y revisar una vinculación de pruebas entre Coorder y DoorDash usando el menú de Clover. La conexión de producción todavía no está disponible y los pedidos de DoorDash aún no aparecen en el tablero de Coorder.</p>
+      <section><h2>1. Abre el portal desde Coorder</h2><p>En Coorder, inicia sesión con la cuenta que tiene conectado el restaurante de Clover. Abre <strong>Settings → DoorDash → Generate access code</strong>. Copia el código y abre el portal. Si no aparece DoorDash en Settings, necesitas la versión de Coorder que incluye este flujo.</p><p>Introduce el código en el portal. Se puede utilizar una sola vez y vence después de 10 minutos. No compartas tu código: permite administrar la conexión de tu restaurante. La sesión del portal dura una hora y se puede cerrar con <strong>Cerrar sesión</strong>.</p></section>
+      <section><h2>2. Revisa tu menú y horario</h2><p>Coorder lee los nombres, precios y modificadores del restaurante conectado en Clover. Confirma los horarios en los que quieres ofrecer ese menú en DoorDash. Puedes agregar varios intervalos al día o dejar el día cerrado.</p><p>Los artículos con importe variable o que requieren clasificación especial necesitan revisión antes de enviarse a DoorDash. Puedes excluirlos del menú de pruebas. Después selecciona <strong>Guardar y revisar menú</strong> y abre las categorías para comprobar sus artículos.</p><p>Estas opciones solo afectan al menú preparado para DoorDash. El inventario, precios y horarios guardados en Clover se conservan.</p></section>
+      <section><h2>3. Autoriza DoorDash y elige la sucursal</h2><p>Cuando la autorización esté habilitada, selecciona <strong>Conectar con DoorDash</strong>. Entrarás directamente en DoorDash; Coorder no solicita tu contraseña de DoorDash. Usa una cuenta autorizada para administrar el restaurante.</p><p>Compara el nombre de tu restaurante en Coorder con el nombre y dirección de la sucursal de DoorDash. Las sucursales que DoorDash marca como no disponibles se muestran sin permitir seleccionarlas. Confirma tu elección y selecciona <strong>Vincular sucursal e importar menú</strong>.</p><p>Si el portal indica que la autorización está en preparación, puedes guardar tu menú y volver más tarde. No se ha vinculado una cuenta de DoorDash hasta completar su autorización y selección de sucursal.</p></section>
+      <section><h2>4. Revisa el resultado</h2><p>Selecciona <strong>Actualizar estado</strong> para consultar la importación. Si DoorDash informa un problema con el menú, revisa el mensaje y utiliza <strong>Reintentar importación de menú</strong> cuando corresponda. Para corregir la fuente del menú o un problema que no puedas resolver, contacta con DomePath.</p><p>Cuando el menú esté listo, abre todos los enlaces <strong>Revisar menú en DoorDash</strong>. Comprueba artículos, precios y horarios. La activación solo está disponible después de que DoorDash apruebe el menú y confirmes su revisión.</p><p>Activar reemplaza los menús anteriores de la sucursal y cambia la conexión de pedidos a Coorder. En este flujo se realiza exclusivamente en Sandbox. La integración no está lista para recibir pedidos de producción.</p></section>
+      <section><h2>Si falta tu restaurante o no tienes permisos</h2><p>Vuelve a autorizar con una cuenta que tenga acceso de administración a esa sucursal. Si sigue sin aparecer, contacta con DoorDash para revisar sus accesos. Una cuenta sin permisos no debe tratarse como un restaurante nuevo.</p><p>Si todavía no tienes un restaurante en DoorDash, contacta con DomePath antes de continuar con el alta. Esta versión del portal está dirigida a restaurantes existentes en DoorDash Sandbox.</p></section>
+      <section><h2>Disponibilidad y soporte</h2><p>Para pausar el restaurante o administrar su disponibilidad, utiliza <a href="https://www.doordash.com/merchant/" target="_blank" rel="noopener noreferrer">DoorDash Merchant Portal</a>. No cierres la sesión de Coorder como forma de pausar DoorDash.</p><p>Para ayuda con Coorder o el menú, escribe a <a href="mailto:admin@domepath.com?subject=Ayuda%20con%20DoorDash%20en%20Coorder">admin@domepath.com</a>. Incluye el nombre del restaurante y el mensaje del portal. No envíes contraseñas ni códigos de acceso.</p></section>
+      <a className="dd-help-cta" href={sitePath("/connect/doordash/")}>Abrir el portal de conexión →</a>
+    </article>
+    <footer className="dd-footer"><span>Coorder by DomePath</span><nav aria-label="Información legal"><a href={sitePath("/legal/privacy/")}>Privacidad</a><a href={sitePath("/legal/eula/")}>Condiciones de uso</a></nav></footer>
+  </main>;
+}

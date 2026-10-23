@@ -28,6 +28,7 @@ export default function SiteHeader() {
         <a href="#features">Features</a>
         <a href="#workflow">How it works</a>
         <a href="#clover">Clover</a>
+        <a href={sitePath("/connect/doordash/")}>DoorDash</a>
       </nav>
     </header>
   );
