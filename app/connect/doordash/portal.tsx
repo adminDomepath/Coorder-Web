@@ -249,7 +249,7 @@ export default function DoorDashPortal() {
               {!status.providerReady ? <div className="dd-card dd-pending">
                 <span className="dd-eyebrow">Siguiente paso</span><h2>Estamos preparando la autorización con DoorDash.</h2>
                 <p>Puedes guardar y revisar tu menú. La conexión con tu cuenta de DoorDash se habilitará cuando termine la configuración de Sandbox.</p>
-                <a href="mailto:admin@domepath.com?subject=Conexi%C3%B3n%20DoorDash%20Coorder">Consultar el estado con DomePath ↗</a>
+                <a href="mailto:leonardo.arias@domepath.com?subject=Conexi%C3%B3n%20DoorDash%20Coorder">Consultar el estado con DomePath ↗</a>
               </div> : !hasOnboarding ? <div className="dd-card">
                 <span className="dd-eyebrow">03 / Elegir sucursal</span>
                 <h2>Autoriza tu cuenta de DoorDash.</h2>
@@ -302,7 +302,7 @@ export default function DoorDashPortal() {
           <a href={sitePath("/connect/doordash/help/")}>Cómo funciona la vinculación →</a>
         </aside>
       </div>
-      <footer className="dd-footer"><span>Coorder by DomePath</span><nav aria-label="Información legal"><a href={sitePath("/legal/privacy/")}>Privacidad</a><a href={sitePath("/legal/eula/")}>Condiciones de uso</a><a href="mailto:admin@domepath.com">Contacto</a></nav></footer>
+      <footer className="dd-footer"><span>Coorder by DomePath</span><nav aria-label="Información legal"><a href={sitePath("/legal/privacy/")}>Privacidad</a><a href={sitePath("/legal/eula/")}>Condiciones de uso</a><a href="mailto:leonardo.arias@domepath.com">Contacto</a></nav></footer>
     </main>
   );
 }

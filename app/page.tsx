@@ -221,6 +221,7 @@ export default function Home() {
           <p>Visual order management for modern restaurant teams.</p>
           <div className="footer-links">
             <a href="mailto:leonardo.arias@domepath.com">Contact</a>
+            <a href={sitePath("/connect/doordash/")}>Connect DoorDash</a>
             <a href={sitePath("/legal/privacy/")}>Privacy</a>
             <a href={sitePath("/legal/eula/")}>EULA</a>
           </div>
