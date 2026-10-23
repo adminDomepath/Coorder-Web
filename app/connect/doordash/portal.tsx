@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState, type FormEvent } from "react";
 import { sitePath } from "../../site-path";
+import DoorDashOperations from "./operations";
 
 const endpoint = "https://us-west1-domepath-coorder.cloudfunctions.net/doorDashPortal";
 const sessionKey = "coorder.doordash.portal.session";
@@ -234,6 +235,7 @@ export default function DoorDashPortal() {
                 {status.preparation.configured && <button className="dd-text-button" disabled={Boolean(busy)} onClick={() => void run("preview", async () => { setPreview(await api<Menu>("preview")); })}>View current DoorDash menu</button>}
                 {hasOnboarding && <p className="dd-caption">After correcting the menu, request another import. Once the integration is activated, its hours are locked in this test portal.</p>}
               </div>
+              {status.preparation.configured && <DoorDashOperations request={api} />}
               {preview && <div className="dd-card dd-menu-preview">
                 <span className="dd-eyebrow">Coorder preview</span><h2>{allItems.length} items for DoorDash</h2>
                 <p>This is the menu data DoorDash will receive. The final preview will be available after the import.</p>
@@ -298,7 +300,7 @@ export default function DoorDashPortal() {
         </section>
         <aside className="dd-sidebar">
           <div className="dd-note"><span aria-hidden="true">↔</span><h3>Your Clover menu stays intact.</h3><p>We read your items to prepare the DoorDash menu. Prices and hours saved in Clover stay unchanged.</p></div>
-          <div className="dd-note"><span aria-hidden="true">◇</span><h3>Start in Sandbox.</h3><p>This flow runs in Sandbox. DoorDash orders do not yet appear on the Coorder board.</p></div>
+          <div className="dd-note"><span aria-hidden="true">◇</span><h3>Start in Sandbox.</h3><p>This flow runs in Sandbox. Prepare item routing before receiving orders. Order ready signals and availability updates require DoorDash Marketplace credentials.</p></div>
           <a href={sitePath("/connect/doordash/help/")}>How the connection works →</a>
         </aside>
       </div>
