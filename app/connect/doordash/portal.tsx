@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState, type FormEvent } from "react";
 import { sitePath } from "../../site-path";
 import DoorDashOperations from "./operations";
+import DirectConnection from "./direct-connection";
 
 const endpoint = "https://us-west1-domepath-coorder.cloudfunctions.net/doorDashPortal";
 const sessionKey = "coorder.doordash.portal.session";
@@ -18,6 +19,7 @@ type MenuStatus = {
 };
 type PortalStatus = {
   merchant: { id: string; name: string; environment: string };
+  onboardingMode: "ssio" | "direct"; providerType: string;
   providerReady: boolean; authorized: boolean;
   onboarding: MenuStatus | null; onboardingPending: boolean;
   preparation: { configured: boolean; openHours: Hour[]; excludedItemIds: string[];
@@ -135,7 +137,8 @@ export default function DoorDashPortal() {
     setReviewed(false);
   });
   const hasOnboarding = Boolean(status?.onboarding || status?.onboardingPending);
-  const currentStep = !token ? 0 : !hasOnboarding ? (status?.authorized ? 2 : 1) : 3;
+  const isDirect = status?.onboardingMode === "direct";
+  const currentStep = !token ? 0 : isDirect ? (status.preparation.configured ? 2 : 1) : !hasOnboarding ? (status?.authorized ? 2 : 1) : 3;
   const allItems = preview?.menus.flatMap((menu) => menu.menu.categories.flatMap((category) => category.items)) ?? [];
 
   return (
@@ -150,10 +153,10 @@ export default function DoorDashPortal() {
       <div className="dd-intro">
         <span className="dd-badge">DoorDash · Sandbox</span>
         <h1>Your restaurant,<br /><span>connected to DoorDash.</span></h1>
-        <p>Review your Clover menu, choose your location, and follow your connection progress in one place.</p>
+        <p>Review your Clover menu, prepare your kitchen, and manage your own restaurant’s DoorDash Sandbox connection.</p>
       </div>
       <ol className="dd-steps" aria-label="Connection steps">
-        {["Access Coorder", "Prepare menu", "Choose location", "Review and activate"].map((label, i) => (
+        {(isDirect ? ["Access Coorder", "Prepare menu", "Restaurant operations", "Review DoorDash"] : ["Access Coorder", "Prepare menu", "Choose location", "Review and activate"]).map((label, i) => (
           <li key={label} className={currentStep === i ? "current" : currentStep > i ? "complete" : ""}
             aria-current={currentStep === i ? "step" : undefined}>
             <span>{currentStep > i ? "✓" : i + 1}</span>{label}
@@ -248,7 +251,7 @@ export default function DoorDashPortal() {
                   </div>)}
                 </details>)}
               </div>}
-              {!status.providerReady ? <div className="dd-card dd-pending">
+              {isDirect ? <DirectConnection locationId={status.merchant.id} providerType={status.providerType} request={api} /> : !status.providerReady ? <div className="dd-card dd-pending">
                 <span className="dd-eyebrow">Next step</span><h2>DoorDash authorization is being set up.</h2>
                 <p>You can save and review your menu. Connecting your DoorDash account will be available once Sandbox setup is complete.</p>
                 <a href="mailto:leonardo.arias@domepath.com?subject=Coorder%20DoorDash%20connection">Ask DomePath for an update ↗</a>
